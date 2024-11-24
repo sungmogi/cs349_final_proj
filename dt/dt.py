@@ -124,13 +124,13 @@ class DecisionTreeClassifierFromScratch:
         return ig
 
     def _entropy(self, y):
-        y = y.astype(int)  # Ensure y is integer
+        y = y.astype(int) 
         hist = np.bincount(y)
         ps = hist / len(y)
         return -np.sum([p * np.log2(p) for p in ps if p > 0])
 
     def _most_common_label(self, y):
-        y = y.astype(int)  # Ensure y is integer
+        y = y.astype(int)
         counter = np.bincount(y)
         most_common = np.argmax(counter)
         return most_common
