@@ -15,7 +15,6 @@ X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.3, random_state=42, stratify=y
 )
 
-# Decision Tree Classifier Implementation
 class Node:
     def __init__(
         self, feature_index=None, threshold=None, left=None, right=None, *, value=None
@@ -147,7 +146,7 @@ class DecisionTreeClassifierFromScratch:
 clf = DecisionTreeClassifierFromScratch(max_depth=10)
 clf.fit(X_train, y_train)
 
-# Make predictions
+# predict
 y_pred = clf.predict(X_test)
 
 # Evaluate the classifier
